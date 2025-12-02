@@ -228,19 +228,20 @@ colaboração é valiosa.
 
 ## 👩‍💻 Para Desenvolvedores (Tech)
 
--   Integração HL7 FHIR\
--   Performance\
--   Segurança avançada
+-   Integração: Implementar suporte nativo a HL7 FHIR
+-   Performance: Otimizar tempos de resposta.
+-   Segurança: Melhorar autenticação e criptografia.
 
-📌 Como ajudar:\
+📌 Como ajudar:
 **Fork → Branch → Pull Request**
 
 ------------------------------------------------------------------------
 
 ## 👨‍⚕️ Para Profissionais de Saúde (Curadoria)
 
--   Revisão de limites de dose\
--   Criação de protocolos regionais
+Precisamos da sua expertise clínica:
+-   Revisão de limites de dose pediátrica.
+-   Criação de protocolos regionais (Dengue, Malária, etc).
 
 📌 Abra uma Issue com:
 
@@ -249,19 +250,11 @@ colaboração é valiosa.
 ------------------------------------------------------------------------
 
 # ⚖️ Disclaimer (Aviso Legal)
+O ValidRx é um CDSS — ferramenta de apoio à decisão clínica.
 
-O ValidRx é um **CDSS**, não substitui julgamento clínico.\
-Decisões são responsabilidade exclusiva do profissional de saúde.\
-Software fornecido "como está", sob licença MIT.
+Não substitui julgamento clínico.
+Responsabilidade final da prescrição é do médico.
+Recomenda-se revisão contínua das regras pela farmácia clínica.
 
-------------------------------------------------------------------------
 
-::: {align="center"}
-```{=html}
-<p>
-```
-Feito com ❤️ e Código para o SUS.
-```{=html}
-</p>
-```
-:::
+
