@@ -1,10 +1,9 @@
 <div align="center">
   <img src="assets/logo.png" alt="ValidRx Logo" width="250"/>
-
-  # 🧠 ValidRx  
+   
   ### Sistema de Inteligência e Supervisão Clínica Automatizada
 
-  **Do Luto ao Legado:** Transformando sistemas passivos em guardiões ativos da vida.
+  **Transformando sistemas passivos em guardiões ativos da vida.
 
   ![Status](https://img.shields.io/badge/Status-Enterprise_MVP-green?style=for-the-badge)
   ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
