@@ -1,92 +1,140 @@
-<div align="center">
-  <img src="assets/logo.png" alt="ValidRx Logo" width="250"/>
-  <h1>ValidRx</h1>
-  <h3>Sistema de Inteligência e Supervisão Clínica Automatizada</h3>
-  
-  <p>
-    Do Luto ao Legado: Transformando sistemas passivos em guardiões ativos da vida.
-  </p>
+::: {align="center"}
+`<img src="assets/logo.png" alt="ValidRx Logo" width="250"/>`{=html}
 
-  ![Status](https://img.shields.io/badge/Status-Enterprise_MVP-green?style=for-the-badge)
-  ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
-  ![Python](https://img.shields.io/badge/Python-3.10%2B-yellow?style=for-the-badge)
-  ![Database](https://img.shields.io/badge/PostgreSQL-15-blue?style=for-the-badge)
-  ![Docker](https://img.shields.io/badge/Docker-Ready-blue?style=for-the-badge)
-</div>
+\# 🧠 ValidRx\
+\### Sistema de Inteligência e Supervisão Clínica Automatizada
 
-<br />
+**Do Luto ao Legado:** Transformando sistemas passivos em guardiões
+ativos da vida.
 
-## 🏥 O Problema & A Missão
-Erros de dosagem pediátrica e administração de medicamentos por vias incorretas são causas frequentes de eventos adversos graves e fatais. Sistemas hospitalares tradicionais (EMRs) são frequentemente passivos, aceitando qualquer dado inserido pelo médico sem crítica clínica.
+![Status](https://img.shields.io/badge/Status-Enterprise_MVP-green?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.10%2B-yellow?style=for-the-badge)
+![Database](https://img.shields.io/badge/PostgreSQL-15-blue?style=for-the-badge)
+![Docker](https://img.shields.io/badge/Docker-Ready-blue?style=for-the-badge)
+:::
 
-O **ValidRx** atua como uma **Barreira de Segurança Ativa**. Ele é um motor lógico (CDSS) que intercepta prescrições perigosas via API, validando matematicamente cada item antes que ele chegue à enfermagem ou ao paciente.
+------------------------------------------------------------------------
 
-**Nosso objetivo:** Criar um padrão de segurança acessível para a saúde pública brasileira (SUS).
+# 📑 Índice
 
----
+-   [🏥 O Problema & A Missão](#-o-problema--a-missão)
+-   [🔄 Arquitetura de
+    Integração](#-arquitetura-de-integração-tasymv--validrx)
+-   [🛡️ As 7 Camadas de Blindagem](#️-as-7-camadas-de-blindagem)
+-   [⚡ Como Rodar o Projeto](#-como-rodar-o-projeto)
+-   [📚 Guia de Uso da API](#-guia-de-uso-da-api-exemplos-práticos)
+    -   [1. Cadastro de
+        Medicamento](#1-cadastrando-um-medicamento-e-regras-admin)
+    -   [2. Cadastro de Interação
+        Medicamentosa](#2-cadastrando-uma-interação-medicamentosa-admin)
+    -   [3. Validação de
+        Prescrição](#3-validando-uma-prescrição-integração-tasy)
+-   [🤝 Como Contribuir](#-como-contribuir)
+-   [⚖️ Disclaimer Legal](#️-disclaimer-aviso-legal)
 
-## 🔄 Arquitetura de Integração (Tasy/MV + ValidRx)
-O ValidRx não é um "software extra" que o médico precisa abrir. Ele roda integrado ao fluxo de trabalho do hospital via API REST.
+------------------------------------------------------------------------
+
+# 🏥 O Problema & A Missão
+
+Erros de **dosagem pediátrica**, administração por **via incorreta** ou
+**superdosagem** estão entre as principais causas de eventos adversos
+graves.
+
+Os sistemas de prontuário eletrônico (Tasy, MV, Soul) são **passivos**:
+aceitam o que o usuário digita sem validação clínica profunda.
+
+O **ValidRx** muda isso:\
+Ele é um **motor de decisão clínica (CDSS)** que intercepta prescrições
+de risco via API **antes que a receita chegue à enfermagem**.
+
+🎯 **Objetivo:** Criar um padrão nacional de segurança aberto para o
+SUS.
+
+------------------------------------------------------------------------
+
+# 🔄 Arquitetura de Integração (Tasy/MV + ValidRx)
+
+O ValidRx roda **no backend**, integrado ao fluxo do hospital, sem
+alterar a rotina do médico.
 
 ![Diagrama de Fluxo de Dados](assets/diagrama_integracao.png)
 
-1.  **Ação no Prontuário:** O médico clica em "Salvar" no Tasy/MV.
-2.  **Validação na Nuvem:** O ValidRx recebe os dados criptografados e processa as regras em milissegundos.
-3.  **Resposta:** Se houver risco fatal, o ValidRx retorna um **BLOQUEIO** que impede a impressão da receita.
+### Fluxo:
 
----
+1.  Médino clica em **Salvar** no prontuário.\
+2.  O ValidRx recebe dados criptografados e aplica todas as regras
+    clínicas.\
+3.  Havendo risco fatal → **Bloqueio imediato**.\
+4.  Caso contrário → **Approved**.
 
-## 🚀 As 7 Camadas de Blindagem
-Nosso motor audita cada linha da prescrição baseando-se em protocolos rígidos:
+------------------------------------------------------------------------
 
-1.  **🧪 Dose Pediátrica (mg/kg):** Cálculo automático e detecção de sobredose/subdose baseada no peso.
-2.  **🛑 Teto Absoluto:** Limite máximo de segurança independente do peso (Freio de Emergência para erros de diluição).
-3.  **💉 Via de Administração:** Bloqueio de vias incompatíveis (Ex: *Adrenalina IV* em paciente sem Parada Cardíaca).
-4.  **⚠️ Interações:** Checagem cruzada com medicamentos de uso contínuo.
-5.  **🤧 Alergias:** Detecção de sensibilidade a princípios ativos e famílias químicas.
-6.  **🚫 Contraindicações:** Validação baseada em Condições Clínicas/CID.
-7.  **🔄 Duplicidade:** Alerta de redundância terapêutica desnecessária.
+# 🛡️ As 7 Camadas de Blindagem
 
----
+O sistema valida cada item da prescrição passando por 7 níveis:
 
-## ⚡ Como Rodar o Projeto
+1.  **🧪 Dose Pediátrica (mg/kg)**\
+2.  **🛑 Teto Absoluto**\
+3.  **💉 Via de Administração**\
+4.  **⚠️ Interações Medicamentosas**\
+5.  **🤧 Alergias**\
+6.  **🚫 Contraindicações (CID)**\
+7.  **🔁 Duplicidade Terapêutica**
 
-A maneira recomendada é utilizando **Docker**, que sobe a API (FastAPI) e o Banco de Dados (PostgreSQL) automaticamente.
+------------------------------------------------------------------------
 
-### Pré-requisitos
-*   Docker e Docker Compose instalados.
+# ⚡ Como Rodar o Projeto
 
-### Passo a Passo
+## Pré-requisitos
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone https://github.com/seu-usuario/validrx.git
-    cd validrx
-    ```
+-   Docker\
+-   Docker Compose
 
-2.  **Inicie o ambiente:**
-    ```bash
-    docker-compose up --build
-    ```
-    *O sistema iniciará automaticamente a API e criará as tabelas no banco de dados.*
+## Passo a passo
 
-3.  **Acesse a Documentação (Swagger UI):**
-    Abra seu navegador em: `http://localhost:8000/docs`
+### 1. Clonar repositório
 
----
+``` bash
+git clone https://github.com/seu-usuario/validrx.git
+cd validrx
+```
 
-## 📚 Guia de Uso da API (Exemplos Práticos)
+### 2. Iniciar ambiente Docker
 
-O ValidRx segue o padrão REST. Abaixo estão os payloads exatos para cadastrar regras e validar prescrições.
+``` bash
+docker-compose up --build
+```
 
-### 1. Cadastrando um Medicamento e Regras (Admin)
-Utilizado pela equipe de farmácia clínica para ensinar ao sistema os parâmetros de segurança de uma droga.
+A API e o banco PostgreSQL serão iniciados automaticamente.
 
-*   **Endpoint:** `POST /api/v1/admin/drugs`
-*   **Header:** `x-admin-key: VALIDRX_OPEN_SOURCE` *(Configurável no .env)*
+### 3. Abrir Swagger
 
-**Exemplo: Cadastrando a Adrenalina (Regras Rígidas)**
-```json
+Acesse:
+
+    http://localhost:8000/docs
+
+------------------------------------------------------------------------
+
+# 📚 Guia de Uso da API (Exemplos Práticos)
+
+A API segue o padrão REST.
+
+------------------------------------------------------------------------
+
+## 1. Cadastrando um Medicamento e Regras (Admin)
+
+**Endpoint:**
+
+    POST /api/v1/admin/drugs
+
+**Header obrigatório:**
+
+    x-admin-key: VALIDRX_OPEN_SOURCE
+
+### 📌 Exemplo --- Cadastrando Adrenalina 1mg/mL
+
+``` json
 {
   "id": "MED_ADRE",
   "nome": "Adrenalina 1mg/mL",
@@ -109,23 +157,38 @@ Utilizado pela equipe de farmácia clínica para ensinar ao sistema os parâmetr
     "teto_dose": 0.5
   }
 }
+```
 
-### 2. Cadastrando uma Interação Medicamentosa (Admin)
+------------------------------------------------------------------------
 
+## 2. Cadastrando uma Interação Medicamentosa (Admin)
+
+### Exemplo --- Varfarina + Ibuprofeno
+
+``` json
 {
   "substancia_a": "varfarina",
   "substancia_b": "ibuprofeno",
   "nivel": "ALTO",
   "mensagem": "🔴 RISCO HEMORRÁGICO: AINEs aumentam o efeito da Varfarina."
 }
+```
 
-### 3. Validando uma Prescrição (Integração Tasy)
+------------------------------------------------------------------------
 
-Este é o endpoint principal chamado pelo sistema hospitalar. Ele aceita dados do paciente e uma lista de medicamentos.
-Endpoint: POST /api/v1/clinical-check
-Exemplo de Payload (Simulando Erro Fatal):
-Cenário: Criança de 20kg, prescrição de 3ml de Adrenalina IV.
+## 3. Validando uma Prescrição (Integração Tasy)
 
+**Endpoint principal do sistema hospitalar:**
+
+    POST /api/v1/clinical-check
+
+### Cenário demonstrativo
+
+📌 *Criança de 20kg, 3ml de Adrenalina IV (erro fatal)*
+
+### Payload
+
+``` json
 {
   "cd_medico": "CRM-12345",
   "patient": {
@@ -150,9 +213,11 @@ Cenário: Criança de 20kg, prescrição de 3ml de Adrenalina IV.
     }
   ]
 }
+```
 
-Exemplo de Resposta (Bloqueio):
+### Resposta esperada (BLOQUEIO)
 
+``` json
 {
   "status": "BLOCKED",
   "message": "⛔ A prescrição contém erros bloqueantes de segurança.",
@@ -167,24 +232,51 @@ Exemplo de Resposta (Bloqueio):
     }
   ]
 }
+```
 
----
+------------------------------------------------------------------------
 
-## 🤝 Como Contribuir
-O ValidRx é um projeto Open Source nascido da necessidade de proteger vidas. Sua ajuda é fundamental.
-👩‍💻 Para Desenvolvedores (Tech)
-Integração: Implementar suporte nativo a HL7 FHIR.
-Performance: Otimizar o tempo de resposta da API para grandes volumes.
-Segurança: Melhorar a autenticação e criptografia de dados sensíveis.
-Como ajudar: Faça um Fork, crie uma Branch (feature/nova-funcionalidade) e envie um Pull Request.
-👨‍⚕️ Para Profissionais de Saúde (Curadoria)
-Precisamos da sua expertise clínica para validar o "cérebro" do sistema:
-Validação de Regras: Revisar os limites de dose pediátrica.
-Protocolos Regionais: Ajudar a cadastrar regras para endemias (Dengue, Malária, etc).
-Como ajudar: Abra uma Issue no GitHub com o título [PROTOCOLO] Sugestão de Regra descrevendo o medicamento e os limites de segurança.
----
-⚖️ Disclaimer (Aviso Legal)
-O ValidRx é uma ferramenta de Apoio à Decisão Clínica (CDSS).
-Suporte, não Substituição: Este software foi projetado para auxiliar profissionais de saúde na detecção de erros matemáticos e procedimentais, mas não substitui o julgamento clínico profissional.
-Responsabilidade: A decisão final sobre qualquer prescrição, dispensação ou administração de tratamento é de responsabilidade exclusiva do médico ou profissional de saúde licenciado.
-Garantias: O software é fornecido "como está", sob a licença MIT, sem garantias de qualquer tipo quanto à sua precisão para casos clínicos específicos. Recomenda-se a validação constante das regras cadastradas pela equipe de farmácia clínica da instituição.
+# 🤝 Como Contribuir
+
+O ValidRx é um projeto Open Source cuja missão é **proteger vidas**. Sua
+colaboração é valiosa.
+
+## 👩‍💻 Para Desenvolvedores (Tech)
+
+-   Integração HL7 FHIR\
+-   Performance\
+-   Segurança avançada
+
+📌 Como ajudar:\
+**Fork → Branch → Pull Request**
+
+------------------------------------------------------------------------
+
+## 👨‍⚕️ Para Profissionais de Saúde (Curadoria)
+
+-   Revisão de limites de dose\
+-   Criação de protocolos regionais
+
+📌 Abra uma Issue com:
+
+    [PROTOCOLO] Sugestão de Regra
+
+------------------------------------------------------------------------
+
+# ⚖️ Disclaimer (Aviso Legal)
+
+O ValidRx é um **CDSS**, não substitui julgamento clínico.\
+Decisões são responsabilidade exclusiva do profissional de saúde.\
+Software fornecido "como está", sob licença MIT.
+
+------------------------------------------------------------------------
+
+::: {align="center"}
+```{=html}
+<p>
+```
+Feito com ❤️ e Código para o SUS.
+```{=html}
+</p>
+```
+:::
