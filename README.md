@@ -3,7 +3,7 @@
    
   ### Sistema de Inteligência e Supervisão Clínica Automatizada
 
-  **Transformando sistemas passivos em guardiões ativos da vida.
+  Transformando sistemas passivos em guardiões ativos da vida.
 
   ![Status](https://img.shields.io/badge/Status-Enterprise_MVP-green?style=for-the-badge)
   ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
