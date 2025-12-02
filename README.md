@@ -1,104 +1,90 @@
-::: {align="center"}
-`<img src="assets/logo.png" alt="ValidRx Logo" width="250"/>`{=html}
+<div align="center">
+  <img src="assets/logo.png" alt="ValidRx Logo" width="250"/>
 
-\# 🧠 ValidRx\
-\### Sistema de Inteligência e Supervisão Clínica Automatizada
+  # 🧠 ValidRx  
+  ### Sistema de Inteligência e Supervisão Clínica Automatizada
 
-**Do Luto ao Legado:** Transformando sistemas passivos em guardiões
-ativos da vida.
+  **Do Luto ao Legado:** Transformando sistemas passivos em guardiões ativos da vida.
 
-![Status](https://img.shields.io/badge/Status-Enterprise_MVP-green?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
-![Python](https://img.shields.io/badge/Python-3.10%2B-yellow?style=for-the-badge)
-![Database](https://img.shields.io/badge/PostgreSQL-15-blue?style=for-the-badge)
-![Docker](https://img.shields.io/badge/Docker-Ready-blue?style=for-the-badge)
-:::
+  ![Status](https://img.shields.io/badge/Status-Enterprise_MVP-green?style=for-the-badge)
+  ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+  ![Python](https://img.shields.io/badge/Python-3.10%2B-yellow?style=for-the-badge)
+  ![Database](https://img.shields.io/badge/PostgreSQL-15-blue?style=for-the-badge)
+  ![Docker](https://img.shields.io/badge/Docker-Ready-blue?style=for-the-badge)
+</div>
 
-------------------------------------------------------------------------
+---
 
 # 📑 Índice
 
--   [🏥 O Problema & A Missão](#-o-problema--a-missão)
--   [🔄 Arquitetura de
-    Integração](#-arquitetura-de-integração-tasymv--validrx)
--   [🛡️ As 7 Camadas de Blindagem](#️-as-7-camadas-de-blindagem)
--   [⚡ Como Rodar o Projeto](#-como-rodar-o-projeto)
--   [📚 Guia de Uso da API](#-guia-de-uso-da-api-exemplos-práticos)
-    -   [1. Cadastro de
-        Medicamento](#1-cadastrando-um-medicamento-e-regras-admin)
-    -   [2. Cadastro de Interação
-        Medicamentosa](#2-cadastrando-uma-interação-medicamentosa-admin)
-    -   [3. Validação de
-        Prescrição](#3-validando-uma-prescrição-integração-tasy)
--   [🤝 Como Contribuir](#-como-contribuir)
--   [⚖️ Disclaimer Legal](#️-disclaimer-aviso-legal)
+- [🏥 O Problema & A Missão](#-o-problema--a-missão)
+- [🔄 Arquitetura de Integração](#-arquitetura-de-integração-tasymv--validrx)
+- [🛡️ As 7 Camadas de Blindagem](#️-as-7-camadas-de-blindagem)
+- [⚡ Como Rodar o Projeto](#-como-rodar-o-projeto)
+- [📚 Guia de Uso da API](#-guia-de-uso-da-api-exemplos-práticos)
+  - [1. Cadastro de Medicamento](#1-cadastrando-um-medicamento-e-regras-admin)
+  - [2. Cadastro de Interação Medicamentosa](#2-cadastrando-uma-interação-medicamentosa-admin)
+  - [3. Validação de Prescrição](#3-validando-uma-prescrição-integração-tasy)
+- [🤝 Como Contribuir](#-como-contribuir)
+- [⚖️ Disclaimer Legal](#️-disclaimer-aviso-legal)
 
-------------------------------------------------------------------------
+---
 
 # 🏥 O Problema & A Missão
 
-Erros de **dosagem pediátrica**, administração por **via incorreta** ou
-**superdosagem** estão entre as principais causas de eventos adversos
-graves.
+Erros de **dosagem pediátrica**, administração por **via incorreta** ou **superdosagem** estão entre as principais causas de eventos adversos graves.
 
-Os sistemas de prontuário eletrônico (Tasy, MV, Soul) são **passivos**:
-aceitam o que o usuário digita sem validação clínica profunda.
+Os sistemas de prontuário eletrônico (Tasy, MV, Soul) são **passivos**: aceitam o que o usuário digita sem validação clínica profunda.
 
-O **ValidRx** muda isso:\
-Ele é um **motor de decisão clínica (CDSS)** que intercepta prescrições
-de risco via API **antes que a receita chegue à enfermagem**.
+O **ValidRx** muda isso:  
+Ele é um **motor de decisão clínica (CDSS)** que intercepta prescrições de risco via API **antes que a receita chegue à enfermagem**.
 
-🎯 **Objetivo:** Criar um padrão nacional de segurança aberto para o
-SUS.
+🎯 **Objetivo:** Criar um padrão nacional de segurança aberto para o SUS.
 
-------------------------------------------------------------------------
+---
 
 # 🔄 Arquitetura de Integração (Tasy/MV + ValidRx)
 
-O ValidRx roda **no backend**, integrado ao fluxo do hospital, sem
-alterar a rotina do médico.
+O ValidRx roda **no backend**, integrado ao fluxo do hospital, sem alterar a rotina do médico.
 
 ![Diagrama de Fluxo de Dados](assets/diagrama_integracao.png)
 
 ### Fluxo:
 
-1.  Médino clica em **Salvar** no prontuário.\
-2.  O ValidRx recebe dados criptografados e aplica todas as regras
-    clínicas.\
-3.  Havendo risco fatal → **Bloqueio imediato**.\
-4.  Caso contrário → **Approved**.
+1. Médino clica em **Salvar** no prontuário.  
+2. O ValidRx recebe dados criptografados e aplica todas as regras clínicas.  
+3. Se houver risco fatal → retorna **BLOCKED** impedindo o procedimento.  
+4. Caso contrário → **APPROVED**.
 
-------------------------------------------------------------------------
+---
 
 # 🛡️ As 7 Camadas de Blindagem
 
 O sistema valida cada item da prescrição passando por 7 níveis:
 
-1.  **🧪 Dose Pediátrica (mg/kg)**\
-2.  **🛑 Teto Absoluto**\
-3.  **💉 Via de Administração**\
-4.  **⚠️ Interações Medicamentosas**\
-5.  **🤧 Alergias**\
-6.  **🚫 Contraindicações (CID)**\
-7.  **🔁 Duplicidade Terapêutica**
+1. **🧪 Dose Pediátrica (mg/kg)**  
+2. **🛑 Teto Absoluto**  
+3. **💉 Via de Administração**  
+4. **⚠️ Interações Medicamentosas**  
+5. **🤧 Alergias**  
+6. **🚫 Contraindicações (CID)**  
+7. **🔁 Duplicidade Terapêutica**
 
-------------------------------------------------------------------------
+---
 
 # ⚡ Como Rodar o Projeto
 
 ## Pré-requisitos
-
--   Docker\
--   Docker Compose
+- Docker  
+- Docker Compose  
 
 ## Passo a passo
 
 ### 1. Clonar repositório
-
-``` bash
+```bash
 git clone https://github.com/seu-usuario/validrx.git
 cd validrx
-```
+
 
 ### 2. Iniciar ambiente Docker
 
