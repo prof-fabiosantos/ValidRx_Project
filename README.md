@@ -42,7 +42,7 @@ Ele é um **motor de decisão clínica (CDSS)** que intercepta prescrições de 
 
 ---
 
-# 🔄 Arquitetura de Integração (Tasy/MV + ValidRx)
+# 🔄 Arquitetura de Integração (Tasy + ValidRx)
 
 O ValidRx roda **no backend**, integrado ao fluxo do hospital, sem alterar a rotina do médico.
 
