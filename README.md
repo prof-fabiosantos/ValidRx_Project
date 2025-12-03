@@ -340,7 +340,7 @@ Os médicos desempenham um papel essencial no aprimoramento do **ValidRx**. Eles
 
 A colaboração médica garante que o ValidRx evolua de forma responsável, com alto rigor clínico e foco em segurança ao paciente.
 
-💬  Discord
+# 💬  Discord
 
 https://discord.gg/HkFJFCt2
 
