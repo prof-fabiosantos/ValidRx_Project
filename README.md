@@ -37,7 +37,7 @@ Erros de **dosagem pediátrica**, administração por **via incorreta** ou **sup
 Os sistemas de prontuário eletrônico (Tasy, MV, Soul) são **passivos**: aceitam o que o usuário digita sem validação clínica profunda.
 
 O **ValidRx** muda isso:  
-Ele é um **motor de decisão clínica (CDSS)** que intercepta prescrições de risco via API **antes que a receita chegue à enfermagem**.
+Ele é uma **IA de decisão clínica** que intercepta prescrições de risco via API **antes que a receita chegue à enfermagem**.
 
 🎯 **Objetivo:** Criar um padrão nacional de segurança aberto para o SUS.
 
@@ -46,8 +46,8 @@ Ele é um **motor de decisão clínica (CDSS)** que intercepta prescrições de 
 # 🤖 O que é o ValidRX?
 
 O **ValidRx** é uma IA de validação em tempo real que se conecta ao Prontuário Eletrônico. Ele audita a prescrição médica antes que ela seja liberada para a farmácia ou  enfermagem. É um tipo de sistema de IA denominado de Sistema Especialista.
-Ele não "aprende sozinho" (Machine Learning) e nem "chuta" respostas baseadas em estatística (como o ChatGPT). Ele opera baseado em uma **Árvore de Decisão Lógica e Determinística**.
-Ele codifica o conhecimento de especialistas humanos (médicos/farmacêuticos) em regras computacionais rigorosas (SE peso < 10kg E dose > 50mg ENTÃO Bloquear).
+Ele não "aprende sozinho" (Machine Learning) e nem "chuta" respostas baseadas em estatística (como o ChatGPT). 
+Ele opera baseado em uma **Árvore de Decisão Lógica e Determinística**. Ele codifica o conhecimento de especialistas humanos (médicos/farmacêuticos) em regras computacionais rigorosas (SE peso < 10kg E dose > 50mg ENTÃO Bloquear).
 
 ---
 
