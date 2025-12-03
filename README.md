@@ -233,6 +233,50 @@ ADMIN_SECRET_KEY=MEUSEGREDO123
 
 ------------------------------------------------------------------------
 
+🖥️ Painel Administrativo (App em Streamlit)
+
+O ValidRx agora inclui um Painel Administrativo desenvolvido em Streamlit, projetado para facilitar a gestão completa do sistema sem necessidade de acessar o banco de dados manualmente ou manipular arquivos diretamente.
+
+Esse painel fornece uma interface simples, visual e organizada para administradores atualizarem informações críticas de forma segura.
+
+✨ Principais Funcionalidades:
+
+- Gerenciamento de Medicamentos
+  - Listar todos os medicamentos cadastrados
+  - Adicionar novos medicamentos
+  - Editar informações existentes
+  - Excluir entradas incorretas ou desatualizadas
+
+- Visualização das Regras de Validação
+- Acessar as regras armazenadas no motor de validação
+
+🔐 Acesso Restrito ao Administrador
+
+Todas as operações do painel são protegidas por autenticação básica.
+Somente usuários autorizados (admin) podem visualizar e modificar os dados.
+
+
+🚀 Como Executar o Painel
+
+1. No mesmo projeto (ou em outro diretório com acesso à API):
+   
+  pip install streamlit requests
+  # ou
+  poetry add streamlit requests
+
+Garante que streamlit e requests estejam instalados (ou adicionados ao seu requirements.txt).
+
+2. Com a API rodando (Docker validrx-api + validrx-db funcionando), execute:
+
+  streamlit run app/validrx_admin_app
+
+📌 Observação
+
+O painel funciona integrado com a API FastAPI e depende do PostgreSQL configurado no Docker Compose.
+Ele é a maneira recomendada de manter o ValidRx sempre atualizado, seguro e alinhado à prática clínica.
+
+------------------------------------------------------------------------
+
 # 🤝 Como Contribuir
 
 O ValidRx é um projeto Open Source cuja missão é **proteger vidas**. Sua
