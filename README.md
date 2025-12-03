@@ -111,7 +111,7 @@ A API segue o padrão REST.
 
 **Endpoint:**
 
-    POST /api/v1/admin/drugs
+    POST /api/admin/drugs
 
 **Header obrigatório:**
 
@@ -144,6 +144,10 @@ A API segue o padrão REST.
 
 ## 2. Cadastrando uma Interação Medicamentosa (Admin)
 
+**Endpoint:**
+
+    POST /api/admin/interactions
+
 ### Exemplo --- Varfarina + Ibuprofeno
 
 ``` json
@@ -161,7 +165,7 @@ A API segue o padrão REST.
 
 **Endpoint principal do sistema hospitalar:**
 
-    POST /api/v1/clinical-check
+    POST /api/clinical-check
 
 ### Cenário demonstrativo
 
@@ -238,7 +242,8 @@ colaboração é valiosa.
 ## 👨‍⚕️ Para Profissionais de Saúde (Curadoria)
 
 Precisamos da sua expertise clínica:
--   Revisão de limites de dose pediátrica.
+-   Criação e Revisão de limites de dose pediátrica.
+-   Criação de Regras de Interações Medicamentosas
 -   Criação de protocolos regionais (Dengue, Malária, etc).
 
 📌 Abra uma Issue com:
