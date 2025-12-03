@@ -95,8 +95,8 @@ O sistema valida cada item da prescrição passando por 7 níveis:
 
 ### 1. Clonar repositório
 ```bash
-git clone https://github.com/seu-usuario/validrx.git
-cd validrx
+https://github.com/prof-fabiosantos/ValidRx_Project.git
+cd ValidRx_Project
 ```
 ### 2. Iniciar ambiente Docker
 
