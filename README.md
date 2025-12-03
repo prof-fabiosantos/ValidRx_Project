@@ -237,6 +237,8 @@ ADMIN_SECRET_KEY=MEUSEGREDO123
 
 O ValidRx agora inclui um Painel Administrativo desenvolvido em Streamlit, projetado para facilitar a gestão completa do sistema sem necessidade de acessar o banco de dados manualmente ou manipular arquivos diretamente.
 
+![Painel](assets/painel.png)
+
 Esse painel fornece uma interface simples, visual e organizada para administradores atualizarem informações críticas de forma segura.
 
 ✨ Principais Funcionalidades:
@@ -261,9 +263,7 @@ Somente usuários autorizados (admin) podem visualizar e modificar os dados.
 1. No mesmo projeto (ou em outro diretório com acesso à API):
    
   pip install streamlit requests
-  # ou
-  poetry add streamlit requests
-
+ 
 Garante que streamlit e requests estejam instalados (ou adicionados ao seu requirements.txt).
 
 2. Com a API rodando (Docker validrx-api + validrx-db funcionando), execute:
