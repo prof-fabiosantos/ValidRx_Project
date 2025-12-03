@@ -121,25 +121,21 @@ A API segue o padrão REST.
 
 ``` json
 {
-  "id": "MED_ADRE",
+  "id": "ADRE_1MG",
   "nome": "Adrenalina 1mg/mL",
-  "principio_ativo": "epinefrina",
-  "classe_terapeutica": "vasopressor",
+  "principio_ativo": "Epinefrina",
+  "classe_terapeutica": "Vasopressor",
   "familias_alergia": [],
-  "concentracao_mg_ml": 1.0,
+  "concentracao_mg_ml": 1,
   "min_idade_meses": 0,
-  "dose_max_diaria_adulto_mg": 1.0,
+  "dose_max_diaria_adulto_mg": 1,
   "contra_indicacoes": [],
-  "vias_permitidas": [
-    "Intramuscular (IM)",
-    "Endovenosa (IV)",
-    "Subcutânea"
-  ],
+  "vias_permitidas": ["Endovenosa (IV)", "Intramuscular (IM)"],
   "pediatria": {
-    "modo": "mg_kg_dose",
-    "min": 0.01,
-    "max": 0.01,
-    "teto_dose": 0.5
+      "modo": "mg_kg_dose",
+      "min": 0.01,
+      "max": 0.01,
+      "teto_dose": 0.5
   }
 }
 ```
@@ -184,20 +180,22 @@ A API segue o padrão REST.
     "age_months": 72,
     "conditions": ["tosse seca"],
     "allergies": [],
-    "current_meds_eans": []
+    "current_meds": []
   },
   "items": [
     {
       "cd_item_prescricao": "1",
       "ean_codigo": "789123456001",
       "nm_medicamento": "Adrenalina 1mg/mL",
-      "dose_valor": 3.0,
+      "dose_input": 3.0,
       "dose_unidade": "ml",
-      "via_administracao": "Endovenosa (IV)",
-      "frequencia_horas": 24
+      "route": "Endovenosa (IV)",
+      "freq_hours": 24,
+      "drug_id": "ADRE_1MG"
     }
   ]
 }
+
 ```
 
 ### Resposta esperada (BLOQUEIO)
