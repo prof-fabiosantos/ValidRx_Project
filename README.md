@@ -276,15 +276,18 @@ Somente usuários autorizados (admin) podem visualizar e modificar os dados.
 🚀 Como Executar o Painel
 
 1. No mesmo projeto (ou em outro diretório com acesso à API):
-  python -m venv venv
-  .\venv\Scripts\activate   
-  pip install streamlit requests
- 
+```bash
+python -m venv venv
+.\venv\Scripts\activate   
+pip install streamlit requests
+ ```
 Garante que streamlit e requests estejam instalados (ou adicionados ao seu requirements.txt).
 
 2. Com a API rodando (Docker validrx-api + validrx-db funcionando), execute:
+```bash
   .\venv\Scripts\activate
   streamlit run validrx_admin_app
+```
 
 📌 Observação
 
