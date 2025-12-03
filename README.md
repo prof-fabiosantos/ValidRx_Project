@@ -294,18 +294,18 @@ Ele é a maneira recomendada de manter o ValidRx sempre atualizado, seguro e ali
 
 # 🤝 Como Contribuir
 
-O ValidRx é um projeto Open Source cuja missão é **proteger vidas**. Sua
+O **ValidRx** é um projeto Open Source cuja missão é **proteger vidas**. Sua
 colaboração é valiosa.
 
 ## 👩‍💻 Para Desenvolvedores (Tech)
 
-O ValidRx é um projeto vivo e precisamos de ajuda em diversas frentes para torná-lo o padrão de segurança do SUS. Escolha sua área de expertise e junte-se a nós:
+O **ValidRx** é um projeto vivo e precisamos de ajuda em diversas frentes para torná-lo o padrão de segurança do SUS. Escolha sua área de expertise e junte-se a nós:
 
-🔌 Interoperabilidade & Padrões: Criação de adaptadores para HL7 FHIR e TISS/TUSS, permitindo que o ValidRx "converse" nativamente com grandes prontuários (Epic, Tasy, MV).
-🗄️ Engenharia de Dados (ETL): Desenvolvimento de scrapers e scripts para atualizar automaticamente a base de medicamentos com dados da ANVISA/CMED e mapeamento de códigos EAN/GTIN.
-⚡ Performance & DevOps: Implementação de cache (Redis) para validações de alta frequência, testes de carga e anonimização de logs para conformidade total com a LGPD.
-🎨 Frontend (Backoffice): Evolução do painel administrativo (atualmente em Streamlit) para interfaces mais robustas (React/Vue.js), facilitando a gestão de regras por farmacêuticos.
-🧪 QA & Testes Clínicos: Criação de testes unitários e cenários de "pacientes virtuais" (CI/CD) para garantir que novas regras não quebrem a lógica de segurança crítica.
+- 🔌 Interoperabilidade & Padrões: Criação de adaptadores para HL7 FHIR e TISS/TUSS, permitindo que o **ValidRx** "converse" nativamente com grandes prontuários (Epic, Tasy, MV).
+- 🗄️ Engenharia de Dados (ETL): Desenvolvimento de scrapers e scripts para atualizar automaticamente a base de medicamentos com dados da ANVISA/CMED e mapeamento de códigos EAN/GTIN.
+- ⚡ Performance & DevOps: Implementação de cache (Redis) para validações de alta frequência, testes de carga e anonimização de logs para conformidade total com a LGPD.
+- 🎨 Frontend (Backoffice): Evolução do painel administrativo (atualmente em Streamlit) para interfaces mais robustas (React/Vue.js), facilitando a gestão de regras por farmacêuticos.
+- 🧪 QA & Testes Clínicos: Criação de testes unitários e cenários de "pacientes virtuais" (CI/CD) para garantir que novas regras não quebrem a lógica de segurança crítica.
 
 📌 Como ajudar:
 **Fork → Branch → Pull Request**
@@ -314,7 +314,7 @@ O ValidRx é um projeto vivo e precisamos de ajuda em diversas frentes para torn
 
 ## 👨‍⚕️ Para Profissionais de Saúde (Curadoria)
 
-Os médicos desempenham um papel essencial no aprimoramento do ValidRx. Eles ajudam a garantir que o sistema seja seguro, confiável e alinhado à prática clínica real. Entre as principais formas de contribuição:
+Os médicos desempenham um papel essencial no aprimoramento do **ValidRx**. Eles ajudam a garantir que o sistema seja seguro, confiável e alinhado à prática clínica real. Entre as principais formas de contribuição:
 
 - Revisão clínica das regras
   Atualizam contraindicações, doses, interações e diretrizes conforme a prática médica.
