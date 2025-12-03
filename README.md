@@ -83,13 +83,15 @@ O sistema valida cada item da prescrição passando por 7 níveis:
 ```bash
 git clone https://github.com/seu-usuario/validrx.git
 cd validrx
-
+```
 ### 2. Iniciar ambiente Docker
 
 Na primeira vez ou quando houver alguma alteração no código use:
 ``` bash
 docker-compose up --build
+```
 Se não houver nenhuma alteração no código use:
+```bash
 docker compose up
 ```
 
