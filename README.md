@@ -125,7 +125,7 @@ A API segue o padrão REST.
 🔐 Autenticação Admin
 
 Todos os endpoints administrativos exigem:
-x-admin-key: SUA_CHAVE_SECRETA
+x-admin-key: ADMIN_SECRET_KEY
 
 A chave é configurada no .env:
 ADMIN_SECRET_KEY=MEUSEGREDO123
