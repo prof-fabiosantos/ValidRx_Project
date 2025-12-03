@@ -17,6 +17,7 @@
 # 📑 Índice
 
 - [🏥 O Problema & A Missão](#-o-problema--a-missão)
+- [🤖 O que é o ValidRX?](#-o-que-e-o-ValidRX)
 - [🔄 Arquitetura de Integração](#-arquitetura-de-integração-tasymv--validrx)
 - [🛡️ As 7 Camadas de Blindagem](#️-as-7-camadas-de-blindagem)
 - [⚡ Como Rodar o Projeto](#-como-rodar-o-projeto)
