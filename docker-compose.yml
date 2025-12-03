@@ -1,9 +1,10 @@
-version: '3.8'
+version: "3.9"
 
 services:
   db:
     image: postgres:15
-    restart: always
+    container_name: validrx-db
+    restart: unless-stopped
     environment:
       POSTGRES_USER: validrx_user
       POSTGRES_PASSWORD: validrx_password
@@ -14,14 +15,19 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   api:
-    build: .
-    command: uvicorn api:app --host 0.0.0.0 --port 8000 --reload
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: validrx-api
+    depends_on:
+      - db
     ports:
       - "8000:8000"
     environment:
       DATABASE_URL: postgresql://validrx_user:validrx_password@db:5432/validrx_db
-    depends_on:
-      - db
+    volumes:
+      - .:/app
+    restart: unless-stopped
 
 volumes:
   postgres_data:
