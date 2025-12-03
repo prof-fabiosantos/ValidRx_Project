@@ -299,9 +299,13 @@ colaboração é valiosa.
 
 ## 👩‍💻 Para Desenvolvedores (Tech)
 
--   Integração: Implementar suporte nativo a HL7 FHIR
--   Performance: Otimizar tempos de resposta.
--   Segurança: Melhorar autenticação e criptografia.
+O ValidRx é um projeto vivo e precisamos de ajuda em diversas frentes para torná-lo o padrão de segurança do SUS. Escolha sua área de expertise e junte-se a nós:
+
+🔌 Interoperabilidade & Padrões: Criação de adaptadores para HL7 FHIR e TISS/TUSS, permitindo que o ValidRx "converse" nativamente com grandes prontuários (Epic, Tasy, MV).
+🗄️ Engenharia de Dados (ETL): Desenvolvimento de scrapers e scripts para atualizar automaticamente a base de medicamentos com dados da ANVISA/CMED e mapeamento de códigos EAN/GTIN.
+⚡ Performance & DevOps: Implementação de cache (Redis) para validações de alta frequência, testes de carga e anonimização de logs para conformidade total com a LGPD.
+🎨 Frontend (Backoffice): Evolução do painel administrativo (atualmente em Streamlit) para interfaces mais robustas (React/Vue.js), facilitando a gestão de regras por farmacêuticos.
+🧪 QA & Testes Clínicos: Criação de testes unitários e cenários de "pacientes virtuais" (CI/CD) para garantir que novas regras não quebrem a lógica de segurança crítica.
 
 📌 Como ajudar:
 **Fork → Branch → Pull Request**
