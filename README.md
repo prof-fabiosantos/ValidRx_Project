@@ -74,7 +74,7 @@ O sistema valida cada item da prescrição passando por 7 níveis:
 # ⚡ Como Rodar o Projeto
 
 ## Pré-requisitos
-- Docker  
+- Docker Desktop 
 - Docker Compose  
 
 ## Passo a passo
@@ -84,11 +84,13 @@ O sistema valida cada item da prescrição passando por 7 níveis:
 git clone https://github.com/seu-usuario/validrx.git
 cd validrx
 
-
 ### 2. Iniciar ambiente Docker
 
+Na primeira vez ou quando houver alguma alteração no código use:
 ``` bash
 docker-compose up --build
+Se não houver nenhuma alteração no código use:
+docker compose up
 ```
 
 A API e o banco PostgreSQL serão iniciados automaticamente.
