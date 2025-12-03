@@ -42,6 +42,16 @@ Ele é um **motor de decisão clínica (CDSS)** que intercepta prescrições de 
 
 ---
 
+# 🤖 O que é o ValidRX?
+
+O **ValidRx** é uma IA de validação em tempo real que se conecta ao Prontuário Eletrônico. Ele audita a prescrição médica antes que ela seja liberada para a farmácia ou  enfermagem. É um tipo de sistema de IA denominado de Sistema Especialista.
+Ele não "aprende sozinho" (Machine Learning) e nem "chuta" respostas baseadas em estatística (como o ChatGPT). Ele opera baseado em uma **Árvore de Decisão Lógica e Determinística**.
+Ele codifica o conhecimento de especialistas humanos (médicos/farmacêuticos) em regras computacionais rigorosas (SE peso < 10kg E dose > 50mg ENTÃO Bloquear).
+
+---
+
+
+
 # 🔄 Arquitetura de Integração (Tasy + ValidRx)
 
 O ValidRx roda **no backend**, integrado ao fluxo do hospital, sem alterar a rotina do médico.
