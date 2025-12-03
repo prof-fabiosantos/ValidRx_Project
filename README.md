@@ -115,7 +115,7 @@ A API segue o padrão REST.
 
 **Header obrigatório:**
 
-    x-admin-key: VALIDRX_OPEN_SOURCE
+    x-admin-key: MEUSEGREDO123
 
 ### 📌 Exemplo --- Cadastrando Adrenalina 1mg/mL
 
