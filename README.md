@@ -241,10 +241,31 @@ colaboração é valiosa.
 
 ## 👨‍⚕️ Para Profissionais de Saúde (Curadoria)
 
-Precisamos da sua expertise clínica:
--   Criação e Revisão de limites de dose pediátrica.
--   Criação de Regras de Interações Medicamentosas
--   Criação de protocolos regionais (Dengue, Malária, etc).
+Os médicos desempenham um papel essencial no aprimoramento do ValidRx. Eles ajudam a garantir que o sistema seja seguro, confiável e alinhado à prática clínica real. Entre as principais formas de contribuição:
+
+- Revisão clínica das regras
+  Atualizam contraindicações, doses, interações e diretrizes conforme a prática médica.
+
+- Curadoria da base de medicamentos
+  Adicionam, corrigem e validam informações essenciais sobre tratamentos.
+
+- Validação de respostas (human-in-the-loop)
+  Avaliam as classificações de risco e justificativas geradas pela IA.
+
+- Testes em cenários clínicos simulados
+  Identificam falsos positivos/negativos e possíveis riscos não previstos.
+
+- Criação de casos para treinamento
+  Fornecem prescrições corretas/incorretas e explicações clínicas estruturadas.
+
+- Auditoria de segurança e ética
+  Ajudam a detectar recomendações inseguras ou inconsistências do motor de validação.
+
+- Feedback contínuo
+  Reportam melhorias necessárias diretamente baseadas na prática.
+
+A colaboração médica garante que o ValidRx evolua de forma responsável, com alto rigor clínico e foco em segurança ao paciente.
+
 
 📌 Abra uma Issue com:
 
