@@ -205,7 +205,7 @@ O que essa regra diz ao sistema: "Se o paciente for adulto, a soma de todas as d
 
     POST /api/admin/interactions
 
-### Exemplo --- Varfarina + Ibuprofeno
+📌 Exemplo ---  Varfarina + Ibuprofeno
 
 ``` json
 {
