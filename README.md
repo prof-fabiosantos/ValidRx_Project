@@ -185,7 +185,7 @@ Aqui está a lista branca (whitelist). Se o médico tentar usar uma via que não
 "vias_permitidas": ["Endovenosa (IV)", "Intramuscular (IM)"]
 ```
 O que essa regra diz ao sistema: "Só aceite se a via for IV ou IM. Se vier 'Oral', 'Subcutânea' ou qualquer outra coisa, BLOQUEIE."
-Nota: No seu código Python (engine.py), existe uma regra extra hardcoded (escrita no código) específica para a Adrenalina IV que exige "Parada Cardíaca", funcionando como uma camada adicional a esta lista.
+Nota: No seu código do motor de IA (engine.py), existe uma regra extra hardcoded (escrita no código) específica para a Adrenalina IV que exige "Parada Cardíaca", funcionando como uma camada adicional a esta lista.
 
 3. A Regra de Segurança para Adultos
 Embora o foco seja pediatria, esta linha protege adultos (ou crianças maiores que 12 anos no seu sistema atual).
