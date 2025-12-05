@@ -170,17 +170,19 @@ Aqui está o "Raio-X" de onde está cada regra:
 
 1. A Regra de Dose Pediátrica e Teto Absoluto
 Aqui está a inteligência matemática que evita a sobredose (o caso da criança de 6 anos).
-``` json
+
+```jsonc
 "pediatria": {
-      "modo": "mg_kg_dose",  // Diz para calcular por dose unitária, não por dia
-      "min": 0.01,           // Dose mínima eficaz: 0.01 mg/kg
-      "max": 0.01,           // Dose máxima padrão: 0.01 mg/kg
-      "teto_dose": 0.5       // <--- AQUI ESTÁ O "FREIO DE EMERGÊNCIA"
-  }
+    "modo": "mg_kg_dose",  // Diz para calcular por dose unitária, não por dia
+    "min": 0.01,           // Dose mínima eficaz: 0.01 mg/kg
+    "max": 0.01,           // Dose máxima padrão: 0.01 mg/kg
+    "teto_dose": 0.5       // <--- AQUI ESTÁ O "FREIO DE EMERGÊNCIA"
+}
 ```
 
 2. A Regra de Via de Administração
 Aqui está a lista branca (whitelist). Se o médico tentar usar uma via que não está escrita aqui, o sistema bloqueia.
+
 ``` json
 "vias_permitidas": ["Endovenosa (IV)", "Intramuscular (IM)"]
 ```
@@ -189,6 +191,7 @@ Nota: No seu código do motor de IA (engine.py), existe uma regra extra hardcode
 
 3. A Regra de Segurança para Adultos
 Embora o foco seja pediatria, esta linha protege adultos (ou crianças maiores que 12 anos no seu sistema atual).
+
 ``` json
 "dose_max_diaria_adulto_mg": 1
 ``` 
