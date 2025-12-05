@@ -46,7 +46,7 @@ O **ValidRx** muda isso: Ele é uma **IA de decisão clínica** que intercepta p
 
 O **ValidRx** é uma IA de validação em tempo real que se conecta ao Prontuário Eletrônico. Ele audita a prescrição médica antes que ela seja liberada para a farmácia ou  enfermagem. É um tipo de sistema de IA denominado de Sistema Especialista. Ele não "aprende sozinho" (**Machine Learning**) e nem "chuta" respostas baseadas em estatística (como o **ChatGPT**).  
 
-Ele opera baseado em uma **Árvore de Decisão Lógica e Determinística**. Ele codifica o conhecimento de especialistas humanos (médicos/farmacêuticos) em regras computacionais rigorosas (**SE peso < 10kg E dose > 50mg ENTÃO Bloquear**).
+Ele opera baseado em uma **árvore de decisão determinística, baseada em regras clínicas validadas**. Ele codifica o conhecimento de especialistas humanos (médicos/farmacêuticos) em regras computacionais rigorosas (**SE peso < 10kg E dose > 50mg ENTÃO Bloquear**).
 
 O ValidRx oferece integração nativa com sistemas hospitalares, como o **Philips Tasy** (https://www.philips.com.br/healthcare/resources/landing/solucao-tasy), através de uma API REST robusta e pronta para uso.
 Para garantir uma implementação ágil e sem fricção, nossos endpoints consomem payloads JSON estruturados rigorosamente conforme o padrão de dados do Tasy. Isso permite uma conexão plug-and-play, onde o ValidRx valida prescrições em tempo real aproveitando a estrutura de dados que o seu prontuário já gera.
