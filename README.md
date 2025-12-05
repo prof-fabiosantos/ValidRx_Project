@@ -36,8 +36,7 @@ Erros de **dosagem pediátrica**, administração por **via incorreta** ou **sup
 
 Os sistemas de prontuário eletrônico (Tasy, MV, Soul) são **passivos**: aceitam o que o usuário digita sem validação clínica profunda.
 
-O **ValidRx** muda isso:  
-Ele é uma **IA de decisão clínica** que intercepta prescrições de risco via API **antes que a receita chegue à enfermagem**.
+O **ValidRx** muda isso: Ele é uma **IA de decisão clínica** que intercepta prescrições de risco via API **antes que a receita chegue à enfermagem**.
 
 🎯 **Objetivo:** Criar um padrão nacional de segurança aberto para o SUS.
 
@@ -49,7 +48,7 @@ O **ValidRx** é uma IA de validação em tempo real que se conecta ao Prontuár
 
 Ele opera baseado em uma **Árvore de Decisão Lógica e Determinística**. Ele codifica o conhecimento de especialistas humanos (médicos/farmacêuticos) em regras computacionais rigorosas (**SE peso < 10kg E dose > 50mg ENTÃO Bloquear**).
 
-O ValidRx oferece integração nativa com sistemas hospitalares, como o **Philips Tasy**, através de uma API REST robusta e pronta para uso.
+O ValidRx oferece integração nativa com sistemas hospitalares, como o **Philips Tasy** (https://www.philips.com.br/healthcare/resources/landing/solucao-tasy), através de uma API REST robusta e pronta para uso.
 Para garantir uma implementação ágil e sem fricção, nossos endpoints consomem payloads JSON estruturados rigorosamente conforme o padrão de dados do Tasy. Isso permite uma conexão plug-and-play, onde o ValidRx valida prescrições em tempo real aproveitando a estrutura de dados que o seu prontuário já gera.
 
 ---
