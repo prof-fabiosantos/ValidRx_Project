@@ -53,8 +53,6 @@ Para garantir uma implementação ágil e sem fricção, nossos endpoints consom
 
 ---
 
-
-
 # 🔄 Arquitetura de Integração (Tasy + ValidRx)
 
 O ValidRx roda **no backend**, integrado ao fluxo do hospital, sem alterar a rotina do médico.
@@ -144,7 +142,7 @@ ADMIN_SECRET_KEY=MEUSEGREDO123
 
     x-admin-key: MEUSEGREDO123
 
-### 📌 Exemplo --- Cadastrando Adrenalina 1mg/mL e as Regras: Dose Pediátrica e Teto Absoluto,  Via de Administração e Segurança para Adultos
+📌 Exemplo --- Cadastrando Adrenalina 1mg/mL e as Regras: Dose Pediátrica e Teto Absoluto,  Via de Administração e Segurança para Adultos
 
 ``` json
 {
@@ -169,7 +167,7 @@ ADMIN_SECRET_KEY=MEUSEGREDO123
 
 O cadastro das regras de segurança neste JSON está dividido em 3 campos principais. É a combinação desses campos que diz ao ValidRx o que ele deve permitir ou bloquear.
 Aqui está o "Raio-X" de onde está cada regra:
-------------------------------------------------------------------------
+
 1. A Regra de Dose Pediátrica e Teto Absoluto
 Aqui está a inteligência matemática que evita a sobredose (o caso da criança de 6 anos).
 ``` json
@@ -180,7 +178,7 @@ Aqui está a inteligência matemática que evita a sobredose (o caso da criança
       "teto_dose": 0.5       // <--- AQUI ESTÁ O "FREIO DE EMERGÊNCIA"
   }
 ```
-------------------------------------------------------------------------
+
 2. A Regra de Via de Administração
 Aqui está a lista branca (whitelist). Se o médico tentar usar uma via que não está escrita aqui, o sistema bloqueia.
 ``` json
@@ -188,7 +186,7 @@ Aqui está a lista branca (whitelist). Se o médico tentar usar uma via que não
 ```
 O que essa regra diz ao sistema: "Só aceite se a via for IV ou IM. Se vier 'Oral', 'Subcutânea' ou qualquer outra coisa, BLOQUEIE."
 Nota: No seu código Python (engine.py), existe uma regra extra hardcoded (escrita no código) específica para a Adrenalina IV que exige "Parada Cardíaca", funcionando como uma camada adicional a esta lista.
-------------------------------------------------------------------------
+
 3. A Regra de Segurança para Adultos
 Embora o foco seja pediatria, esta linha protege adultos (ou crianças maiores que 12 anos no seu sistema atual).
 ``` json
