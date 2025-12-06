@@ -312,6 +312,42 @@ Quando o **ValidRx** encontra esses dois medicamentos prescritos para o mesmo pa
 }
 ```
 
+
+### Integração com 0 Sistema MV (SOUL)
+O ValidRx por ser aberto e implementar uma arquitetura agnóstica ele se adaptar aos padrões de dados do sistema **MV (SOUL)**, líder na rede pública. Abaixo, um exemplo de payload mapeando os campos nativos do MV (Tabelas `PRE_MED`, `ITPRE_MED`) para a nossa API.
+
+**Cenário:** Integração via módulo MDI (MV Data Interchange).
+
+*   **Endpoint:** `POST /api/v1/clinical-check`
+
+**Payload (Simulação MV):**
+```json
+{
+  "cd_medico": "12345",  // No MV: PRE_MED.CD_PRESTADOR
+  "patient": {
+    "cd_pessoa_fisica": "889900", // No MV: PACIENTE.CD_PACIENTE
+    "nm_paciente": "Maria Oliveira",
+    "nr_atendimento": "2023001", // No MV: ATENDIME.CD_ATENDIMENTO
+    "weight_kg": 18.5,
+    "age_months": 70,
+    "conditions": ["J00", "R50"], // Códigos CID-10
+    "allergies": ["A01"], // Códigos de alergia do MV
+    "current_meds_eans": []
+  },
+  "items": [
+    {
+      "cd_item_prescricao": "10", // No MV: ITPRE_MED.CD_ITPRE_MED
+      "ean_codigo": "789123456001", // Código de Barras (GTIN)
+      "nm_medicamento": "ADRENALINA SOL INJ 1MG/ML", // No MV: DS_PRODUTO
+      "dose_valor": 3.0, // No MV: QT_DOSE
+      "dose_unidade": "AMP", // No MV: DS_UNIDADE
+      "via_administracao": "EV", // No MV: CD_TIP_ESQ (Sigla 'EV' para Endovenosa)
+      "frequencia_horas": 24
+    }
+  ]
+}
+```
+
 ------------------------------------------------------------------------
 
 🖥️ Painel Administrativo (App em Streamlit)
