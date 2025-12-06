@@ -215,6 +215,14 @@ O que essa regra diz ao sistema: "Se o paciente for adulto, a soma de todas as d
   "mensagem": "🔴 RISCO HEMORRÁGICO: AINEs aumentam o efeito da Varfarina."
 }
 ```
+Este JSON representa o cadastro de uma regra de Interação Medicamentosa no sistema ValidRx. Ele serve para "ensinar" ao sistema que duas substâncias específicas não devem ser administradas juntas devido a um risco clínico.  
+
+Aqui está o detalhamento de cada campo:
+- **substancia_a** e **substancia_b**: Identificam os dois princípios ativos que geram o conflito. Neste exemplo, são a Varfarina (anticoagulante) e o Ibuprofeno (anti-inflamatório).
+- **nivel**: Define a gravidade da interação. O valor "ALTO" indica que o sistema deve tratar isso como um risco severo (geralmente resultando em um bloqueio ou alerta vermelho para o médico).
+- **mensagem**: É o texto explicativo que aparecerá na tela do profissional de saúde. Ele justifica o alerta: "🔴 RISCO HEMORRÁGICO: AINEs aumentam o efeito da Varfarina."  
+
+Quando o **ValidRx** encontra esses dois medicamentos prescritos para o mesmo paciente, ele consulta essa regra e dispara o alerta definido no JSON.
 
 ------------------------------------------------------------------------
 
