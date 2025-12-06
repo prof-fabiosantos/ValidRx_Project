@@ -313,7 +313,7 @@ Quando o **ValidRx** encontra esses dois medicamentos prescritos para o mesmo pa
 ```
 
 
-### Integração com o Sistema MV (SOUL)
+### Validando uma Prescrição (Sistema MV)
 O ValidRx por ser aberto e implementar uma arquitetura agnóstica ele se adaptar aos padrões de dados do sistema **MV (SOUL)**, líder na rede pública. Abaixo, um exemplo de payload mapeando os campos nativos do MV (Tabelas `PRE_MED`, `ITPRE_MED`) para a nossa API.
 
 **Cenário:** Integração via módulo MDI (MV Data Interchange).
