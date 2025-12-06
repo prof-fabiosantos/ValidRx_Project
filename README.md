@@ -234,7 +234,8 @@ Quando o **ValidRx** encontra esses dois medicamentos prescritos para o mesmo pa
 
 ### Cenário demonstrativo
 
-📌 *Criança de 20kg, 3ml de Adrenalina IV (erro fatal)*
+📌 Exemplo de prescrição para validação
+*Criança de 20kg, 3ml de Adrenalina IV (erro fatal)*
 
 ### Payload
 
