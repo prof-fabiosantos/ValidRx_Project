@@ -75,15 +75,15 @@ O motor codifica o conhecimento clínico validado (protocolos médicos e farmac�
 3.  **Conhecimento Especializado Codificado:**
     O sistema atua como um "auditor sênior digital". Ele não aprende sozinho; ele é ensinado por especialistas humanos através do Painel Administrativo, transformando diretrizes da ANVISA e protocolos hospitalares em código executável.
 
-4. **Intregação com Sistemas Hospitalares**
-O ValidRx oferece integração nativa com sistemas hospitalares, como o **Philips Tasy** (https://www.philips.com.br/healthcare/resources/landing/solucao-tasy), através de uma API REST robusta e pronta para uso.
-Para garantir uma implementação ágil e sem fricção, nossos endpoints consomem payloads JSON estruturados rigorosamente conforme o padrão de dados do Tasy. Isso permite uma conexão plug-and-play, onde o ValidRx valida prescrições em tempo real aproveitando a estrutura de dados que o seu prontuário já gera.
-
 ---
 
 # 🔄 Arquitetura de Integração (Tasy + ValidRx)
 
 O ValidRx roda **no backend**, integrado ao fluxo do hospital, sem alterar a rotina do médico.
+
+**Intregação com Sistemas Hospitalares**
+O ValidRx oferece integração nativa com sistemas hospitalares, como o **Philips Tasy** (https://www.philips.com.br/healthcare/resources/landing/solucao-tasy), através de uma API REST robusta e pronta para uso.
+Para garantir uma implementação ágil e sem fricção, nossos endpoints consomem payloads JSON estruturados rigorosamente conforme o padrão de dados do Tasy. Isso permite uma conexão plug-and-play, onde o ValidRx valida prescrições em tempo real aproveitando a estrutura de dados que o seu prontuário já gera.
 
 ![Diagrama de Fluxo de Dados](assets/diagrama_integracao.png)
 
