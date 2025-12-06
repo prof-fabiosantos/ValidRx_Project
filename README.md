@@ -46,8 +46,36 @@ O **ValidRx** muda isso: Ele é uma **IA de decisão clínica** que intercepta p
 
 O **ValidRx** é uma IA de validação em tempo real que se conecta ao Prontuário Eletrônico. Ele audita a prescrição médica antes que ela seja liberada para a farmácia ou  enfermagem. É um tipo de sistema de IA denominado de Sistema Especialista. Ele não "aprende sozinho" (**Machine Learning**) e nem "chuta" respostas baseadas em probabilidade (como o **ChatGPT**).  
 
-Ele opera baseado em uma **árvore de decisão determinística, baseada em regras clínicas validadas**. Ele codifica o conhecimento de especialistas humanos (médicos/farmacêuticos) em regras computacionais rigorosas (**SE peso < 10kg E dose > 50mg ENTÃO Bloquear**).
+Ele opera baseado em uma **árvore de decisão determinística, baseada em regras clínicas validadas**. Ele codifica o conhecimento de especialistas humanos (médicos/farmacêuticos) em regras computacionais rigorosas.
 
+## 🧠 O Motor de Inteligência: IA Simbólica
+
+O ValidRx não utiliza "caixas pretas" ou modelos probabilísticos que podem alucinar. O sistema opera baseado em uma **Árvore de Decisão Determinística**, classificada tecnicamente como um **Sistema Especialista Baseado em Regras (Rule-Based Expert System)**.
+
+### Como funciona o raciocínio?
+O motor codifica o conhecimento clínico validado (protocolos médicos e farmacêuticos) em regras computacionais rigorosas. Para qualquer entrada de dados, o sistema segue um fluxo lógico auditável:
+
+1.  **Determinismo Puro:**
+    Ao contrário de IAs generativas, o ValidRx **não trabalha com probabilidades**. Se a regra define um teto de segurança, o sistema aplicará esse teto 100% das vezes. A mesma entrada sempre gerará a mesma saída, garantindo previsibilidade jurídica e clínica.
+
+2.  **Lógica Computacional Rigorosa (IF / THEN):**
+    O "cérebro" do sistema processa prescrições através de operadores lógicos booleanos. O exemplo abaixo ilustra o processamento interno de uma regra de segurança pediátrica:
+
+    > *"**SE** o peso do paciente for menor que 10kg **E** a dose prescrita for maior que 50mg, **ENTÃO** execute o Bloqueio."*
+
+    ```mermaid
+    graph LR
+    A[Entrada de Dados] --> B{Peso < 10kg?}
+    B -- Sim --> C{Dose > 50mg?}
+    B -- Não --> D[Aprovar]
+    C -- Sim --> E[⛔ BLOQUEAR]
+    C -- Não --> D
+    ```
+
+3.  **Conhecimento Especializado Codificado:**
+    O sistema atua como um "auditor sênior digital". Ele não aprende sozinho; ele é ensinado por especialistas humanos através do Painel Administrativo, transformando diretrizes da ANVISA e protocolos hospitalares em código executável.
+
+4. **Intregação com Sistemas Hospitalares**
 O ValidRx oferece integração nativa com sistemas hospitalares, como o **Philips Tasy** (https://www.philips.com.br/healthcare/resources/landing/solucao-tasy), através de uma API REST robusta e pronta para uso.
 Para garantir uma implementação ágil e sem fricção, nossos endpoints consomem payloads JSON estruturados rigorosamente conforme o padrão de dados do Tasy. Isso permite uma conexão plug-and-play, onde o ValidRx valida prescrições em tempo real aproveitando a estrutura de dados que o seu prontuário já gera.
 
