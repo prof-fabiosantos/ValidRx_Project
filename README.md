@@ -25,7 +25,7 @@
   - [1. Cadastro de Medicamento](#1-cadastrando-um-medicamento-e-regras-admin)
   - [2. Cadastro de Interação Medicamentosa](#2-cadastrando-uma-interação-medicamentosa-admin)
   - [3. Validação de Prescrição Tasy](#3-validando-uma-prescrição-integração-tasy)
-  - [4. Validação de Prescrição MV](#4-validando-uma-prescrição- (Sistema MV))
+  - [4. Validação de Prescrição MV](#4-validando-uma-prescrição-sistema-MV))
 - [🤝 Como Contribuir](#-como-contribuir)
 - [⚖️ Disclaimer Legal](#️-disclaimer-aviso-legal)
 
