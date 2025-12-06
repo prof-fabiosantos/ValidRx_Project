@@ -318,10 +318,10 @@ O ValidRx por ser aberto e implementar uma arquitetura agnóstica ele se adaptar
 
 **Cenário:** Integração via módulo MDI (MV Data Interchange).
 
-*   **Endpoint:** `POST /api/v1/clinical-check`
+*   **Endpoint:** `POST /api/clinical-check`
 
 **Payload (Simulação MV):**
-```json
+```jsonc
 {
   "cd_medico": "12345",  // No MV: PRE_MED.CD_PRESTADOR
   "patient": {
