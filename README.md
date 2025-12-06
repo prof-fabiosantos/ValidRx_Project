@@ -24,7 +24,8 @@
 - [📚 Guia de Uso da API](#-guia-de-uso-da-api-exemplos-práticos)
   - [1. Cadastro de Medicamento](#1-cadastrando-um-medicamento-e-regras-admin)
   - [2. Cadastro de Interação Medicamentosa](#2-cadastrando-uma-interação-medicamentosa-admin)
-  - [3. Validação de Prescrição](#3-validando-uma-prescrição-integração-tasy)
+  - [3. Validação de Prescrição Tasy](#3-validando-uma-prescrição-integração-tasy)
+  - [4. Validação de Prescrição MV](#4-validando-uma-prescrição- (Sistema MV))
 - [🤝 Como Contribuir](#-como-contribuir)
 - [⚖️ Disclaimer Legal](#️-disclaimer-aviso-legal)
 
@@ -313,7 +314,7 @@ Quando o **ValidRx** encontra esses dois medicamentos prescritos para o mesmo pa
 ```
 
 
-### Validando uma Prescrição (Sistema MV)
+## 4. Validando uma Prescrição (Sistema MV)
 O ValidRx por ser aberto e implementar uma arquitetura agnóstica ele se adaptar aos padrões de dados do sistema **MV (SOUL)**, líder na rede pública. Abaixo, um exemplo de payload mapeando os campos nativos do MV (Tabelas `PRE_MED`, `ITPRE_MED`) para a nossa API.
 
 **Cenário:** Integração via módulo MDI (MV Data Interchange).
