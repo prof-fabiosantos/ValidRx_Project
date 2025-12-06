@@ -61,7 +61,7 @@ O ValidRx roda **no backend**, integrado ao fluxo do hospital, sem alterar a rot
 
 ### Fluxo:
 
-1. Médino clica em **Salvar** no prontuário.  
+1. Médico clica em **Salvar** no prontuário.  
 2. O ValidRx recebe dados criptografados e aplica todas as regras clínicas.  
 3. Se houver risco fatal → retorna **BLOCKED** impedindo o procedimento.  
 4. Caso contrário → **APPROVED**.
