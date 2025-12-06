@@ -8,6 +8,47 @@ from pydantic import BaseModel
 from src.engine import ClinicalEngine
 from src.database import DatabaseManager
 
+# ============================
+# 🔷 NOVO: CAMADA DE NORMALIZAÇÃO (TRADUTOR)
+# ============================
+
+# Mapeamento de siglas de mercado (MV/Tasy) para o padrão ValidRx
+ROUTE_MAPPING = {
+    # Vias Venosas
+    "EV": "Endovenosa (IV)",
+    "IV": "Endovenosa (IV)",
+    "INTRAVENOSA": "Endovenosa (IV)",
+    
+    # Vias Musculares
+    "IM": "Intramuscular (IM)",
+    "INTRAMUSCULAR": "Intramuscular (IM)",
+    
+    # Vias Orais
+    "VO": "Oral",
+    "ORAL": "Oral",
+    "PO": "Oral", # Per Os (latim)
+    
+    # Subcutânea
+    "SC": "Subcutânea",
+    "SQ": "Subcutânea",
+    "SUBCUTANEA": "Subcutânea"
+}
+
+def normalize_route(route_input: str) -> str:
+    """
+    Traduz siglas (EV, IM, VO) para o padrão do banco de dados.
+    Ex: Recebe 'EV' -> Retorna 'Endovenosa (IV)'
+    """
+    if not route_input:
+        return "Desconhecida"
+    
+    # Converte para maiúsculo e busca no mapa. Se não achar, devolve o original.
+    return ROUTE_MAPPING.get(route_input.upper(), route_input)
+
+# ============================
+# 🔷 CONFIGURAÇÃO DA API
+# ============================
+
 # Carrega variável de ambiente
 ADMIN_KEY = os.getenv("ADMIN_KEY", "DEFAULT_ADMIN_KEY")
 
@@ -258,6 +299,7 @@ def clinical_check(req: ClinicalRequest):
     """
     Endpoint principal de checagem clínica.
     Usa ClinicalEngine com dados vindos do banco.
+    Aceita siglas como EV, IM, VO e traduz para o padrão do ValidRx.
     """
 
     # Carrega engine com drogas e interações
@@ -269,17 +311,27 @@ def clinical_check(req: ClinicalRequest):
     results = []
 
     for item in req.items:
+        # 1. Normaliza a rota (Ex: "EV" vira "Endovenosa (IV)")
+        route_normalized = normalize_route(item.route)
+
+        # 2. Cria um dicionário dos dados do item e injeta a rota traduzida
+        # Isso garante que a engine receba a string exata que está no banco de dados
+        prescription_data = item.dict()
+        prescription_data['route'] = route_normalized
+
+        # 3. Chama a validação
         alert = engine.validate(
             patient=req.patient.dict(),
-            prescription=item.dict()
+            prescription=prescription_data
         )
+        
         results.append({
             "item": item.cd_item_prescricao,
+            "route_interpreted": route_normalized, # Retorna qual rota foi entendida (útil para debug)
             "alerts": alert
         })
 
     return {"results": results}
-
 
 # ============================
 # 🔷 HEALTHCHECK
