@@ -384,7 +384,7 @@ O **ValidRx** é um projeto vivo e precisamos de ajuda em diversas frentes para 
 
 ## 👨‍⚕️ Para Profissionais de Saúde (Curadoria)
 
-Os médicos desempenham um papel essencial no aprimoramento do **ValidRx**. Eles ajudam a garantir que o sistema seja seguro, confiável e alinhado à prática clínica real. Entre as principais formas de contribuição:
+Os farmacêuticos e médicos desempenham um papel essencial no aprimoramento do **ValidRx**. Eles ajudam a garantir que o sistema seja seguro, confiável e alinhado à prática clínica real. Entre as principais formas de contribuição:
 
 - Revisão clínica das regras
   Atualizam contraindicações, doses, interações e diretrizes conforme a prática médica.
