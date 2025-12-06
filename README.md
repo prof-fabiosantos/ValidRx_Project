@@ -323,29 +323,31 @@ O ValidRx por ser aberto e implementar uma arquitetura agnóstica ele se adaptar
 **Payload (Simulação MV):**
 ```jsonc
 {
-  "cd_medico": "12345",  // No MV: PRE_MED.CD_PRESTADOR
+  "cd_medico": "12345", 
   "patient": {
-    "cd_pessoa_fisica": "889900", // No MV: PACIENTE.CD_PACIENTE
-    "nm_paciente": "Maria Oliveira",
-    "nr_atendimento": "2023001", // No MV: ATENDIME.CD_ATENDIMENTO
-    "weight_kg": 18.5,
-    "age_months": 70,
-    "conditions": ["J00", "R50"], // Códigos CID-10
-    "allergies": ["A01"], // Códigos de alergia do MV
-    "current_meds_eans": []
+    "cd_pessoa_fisica": "MV-888999",
+    "nm_paciente": "ANA CLARA DA SILVA",
+    "nr_atendimento": "102030",
+    "weight_kg": 20.0,
+    "age_months": 72,
+    "conditions": ["J00"], 
+    "allergies": [],
+    "current_meds": []
   },
   "items": [
     {
-      "cd_item_prescricao": "10", // No MV: ITPRE_MED.CD_ITPRE_MED
-      "ean_codigo": "789123456001", // Código de Barras (GTIN)
-      "nm_medicamento": "ADRENALINA SOL INJ 1MG/ML", // No MV: DS_PRODUTO
-      "dose_valor": 3.0, // No MV: QT_DOSE
-      "dose_unidade": "AMP", // No MV: DS_UNIDADE
-      "via_administracao": "EV", // No MV: CD_TIP_ESQ (Sigla 'EV' para Endovenosa)
-      "frequencia_horas": 24
+      "cd_item_prescricao": "1",
+      "ean_codigo": "789123456001",
+      "nm_medicamento": "ADRENALINA SOL INJ 1MG/ML", 
+      "dose_input": 3.0,
+      "dose_unidade": "AMP",
+      "route": "EV", 
+      "freq_hours": 24,
+      "drug_id": "MED_ADRE"
     }
   ]
 }
+ 
 ```
 
 ------------------------------------------------------------------------
