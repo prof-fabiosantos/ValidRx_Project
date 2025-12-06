@@ -31,6 +31,17 @@
 
 ---
 
+## 📰 Novidades & Atualizações
+
+### [DEZ/2025] 🆕 Suporte Nativo ao Sistema MV (Soul)
+O ValidRx agora é oficialmente compatível com os padrões de dados do sistema **MV**, líder na rede pública.
+*   **Dicionário de Tradução Inteligente:** Implementamos uma camada de normalização na API (`ROUTE_MAPPING`) que atua como um tradutor em tempo real.
+*   **Interoperabilidade Total:** O sistema agora aceita e unifica automaticamente diferentes "dialetos" hospitalares:
+    *   **Padrão Tasy:** Aceita termos descritivos (ex: `Endovenosa`, `Oral`).
+    *   **Padrão MV:** Aceita siglas e mnemônicos (ex: `EV`, `VO`, `SC`, `IM`).
+Isso garante que o ValidRx funcione simultaneamente em ambientes híbridos sem necessidade de reconfiguração do código.
+
+---
 # 🏥 O Problema & A Missão
 
 Erros de **dosagem pediátrica**, administração por **via incorreta** ou **superdosagem** estão entre as principais causas de eventos adversos graves.
