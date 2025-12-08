@@ -6,7 +6,7 @@
   Transformando sistemas passivos em guardiões ativos da vida.
 
   ![Status](https://img.shields.io/badge/Status-Enterprise_MVP-green?style=for-the-badge)
-  ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+  ![License](https://img.shields.io/badge/License-Apache%202.0-blue?style=for-the-badge)
   ![Python](https://img.shields.io/badge/Python-3.10%2B-yellow?style=for-the-badge)
   ![Database](https://img.shields.io/badge/PostgreSQL-15-blue?style=for-the-badge)
   ![Docker](https://img.shields.io/badge/Docker-Ready-blue?style=for-the-badge)
