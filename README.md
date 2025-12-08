@@ -441,26 +441,26 @@ O **ValidRx** é um projeto vivo e precisamos de ajuda em diversas frentes para 
 
 Os farmacêuticos e médicos desempenham um papel essencial no aprimoramento do **ValidRx**. Eles ajudam a garantir que o sistema seja seguro, confiável e alinhado à prática clínica real. Entre as principais formas de contribuição:
 
-- Revisão clínica das regras:
-  Atualizam contraindicações, doses, interações e diretrizes conforme a prática médica.
+- **Revisão clínica das regras**:
+  atualizam contraindicações, doses, interações e diretrizes conforme a prática médica.
 
-- Curadoria da base de medicamentos:
-  Adicionam, corrigem e validam informações essenciais sobre tratamentos.
+- **Curadoria da base de medicamentos**:
+  adicionam, corrigem e validam informações essenciais sobre tratamentos.
 
-- Validação de respostas (human-in-the-loop):
-  Avaliam as classificações de risco e justificativas geradas pela IA.
+- **Validação de respostas**:
+  avaliam as classificações de risco e justificativas geradas pela IA.
 
-- Testes em cenários clínicos simulados:
-  Identificam falsos positivos/negativos e possíveis riscos não previstos.
+- **Testes em cenários clínicos simulados**:
+  adentificam falsos positivos/negativos e possíveis riscos não previstos.
 
-- Criação de casos para treinamento:
-  Fornecem prescrições corretas/incorretas e explicações clínicas estruturadas.
+- **Criação de casos para treinamento**:
+  fornecem prescrições corretas/incorretas e explicações clínicas estruturadas.
 
-- Auditoria de segurança e ética:
-  Ajudam a detectar recomendações inseguras ou inconsistências do motor de validação.
+- **Auditoria de segurança e ética**:
+  ajudam a detectar recomendações inseguras ou inconsistências do motor de validação.
 
-- Feedback contínuo:
-  Reportam melhorias necessárias diretamente baseadas na prática.
+- **Feedback contínuo**:
+  reportam melhorias necessárias diretamente baseadas na prática.
 
 A colaboração médica garante que o ValidRx evolua de forma responsável, com alto rigor clínico e foco em segurança ao paciente.
 
