@@ -1,4 +1,3 @@
-```markdown
 # 🧠 Arquitetura do Motor de Decisão ValidRx
 
 ## 1. Visão Geral: Sistema Especialista Determinístico
@@ -139,4 +138,4 @@ Para manter o sistema seguro e atualizado:
 *   **👨‍⚕️ Profissionais de Saúde (Dados):** Seu papel é definir os **Parâmetros**. Vocês dizem qual é o valor de `teto_dose` e o que vai em `vias_permitidas` usando o Painel Administrativo ou API de Admin. O motor obedecerá cegamente o que vocês cadastrarem.
 *   **💻 Desenvolvedores (Lógica):** Seu papel é aprimorar a **Árvore**. Vocês criam novos "Nós" de decisão no código (ex: criar uma verificação nova para função renal) e otimizam a performance e segurança da API.
 
-```
+
