@@ -396,7 +396,7 @@ Somente usuários autorizados (admin) podem visualizar e modificar os dados.
 
 🚀 Como Executar o Painel
 
-1. No mesmo projeto (ou em outro diretório com acesso à API):
+1. No mesmo projeto (acesse diretório app):
 ```bash
 python -m venv venv
 .\venv\Scripts\activate   
