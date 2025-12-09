@@ -476,7 +476,7 @@ https://discord.gg/HkFJFCt2
 
 Este projeto é distribuído sob a licença **Apache License 2.0**.
 
-Isso concede a liberdade para usar, modificar e distribuir este software (inclusive para fins comerciais e em hospitais privados), **desde que as condições de atribuição sejam rigorosamente respeitadas**.
+Isso concede a liberdade para usar, modificar e distribuir este software (em hospitais públicos e privados), **desde que as condições de atribuição sejam rigorosamente respeitadas**.
 
 ### ⚠️ Condição Mandatória de Uso
 O conceito, arquitetura e código original foram desenvolvidos por **Prof. Fábio Santos**.
