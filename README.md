@@ -472,6 +472,23 @@ https://discord.gg/HkFJFCt2
 
 ------------------------------------------------------------------------
 
+## 📄 Licença e Direitos Autorais
+
+Este projeto é distribuído sob a licença **Apache License 2.0**.
+
+Isso concede a liberdade para usar, modificar e distribuir este software (inclusive para fins comerciais e em hospitais privados), **desde que as condições de atribuição sejam rigorosamente respeitadas**.
+
+### ⚠️ Condição Mandatória de Uso
+O conceito, arquitetura e código original foram desenvolvidos por **Prof. Fábio Santos**.
+
+Para estar em conformidade com a licença, qualquer redistribuição, cópia ou trabalho derivado deste software **DEVE**:
+1.  Manter o arquivo `LICENSE` original.
+2.  **Manter intacto o arquivo `NOTICE`**, que contém os créditos devidos ao autor original e aos contribuidores do projeto.
+
+A remoção ou ocultação dos créditos de autoria constitui violação direta dos termos de uso. O objetivo deste projeto é salvar vidas através da colaboração, e o reconhecimento da autoria é a base dessa confiança.
+
+------------------------------------------------------------------------
+
 # ⚖️ Disclaimer (Aviso Legal)
 O ValidRx é um CDSS — ferramenta de apoio à decisão clínica.
 
