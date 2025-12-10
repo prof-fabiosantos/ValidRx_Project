@@ -42,7 +42,7 @@ O ValidRx agora é oficialmente compatível com os padrões de dados do sistema 
 Isso garante que o ValidRx funcione simultaneamente em ambientes híbridos sem necessidade de reconfiguração do código.
 
 ### [DEZ/2025] 📘 Nova Documentação de Arquitetura (Motor Lógico)
-Publicamos o guia técnico **[DOCS_IA_MOTOR.md](DOCS_IA_MOTOR.md)**, essencial para novos voluntários (Devs e Profissionais de Saúde).
+Publicamos o guia técnico **[DOCS_IA_MOTOR.md](docs/DOCS_IA_MOTOR.md)**, essencial para novos voluntários (Devs e Profissionais de Saúde).
 *   **Abertura da "Caixa Preta":** Explicação detalhada de como o ValidRx implementa sua **Árvore de Decisão Determinística**, separando totalmente a Lógica (Python) do Conhecimento (Banco de Dados).
 *   **Trace de Execução:** Um passo a passo visual do que acontece no milissegundo em que uma prescrição chega à API (usando o caso real da Adrenalina).
 *   **Guia de Contribuição:** Entenda onde mexer no código para criar novos "Nós de Decisão" e como os dados persistem no PostgreSQL.
