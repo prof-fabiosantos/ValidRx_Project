@@ -33,6 +33,19 @@
 
 ## 📰 Novidades & Atualizações
 
+### [DEZ/2025] 📺 Apresentação Oficial: ValidRx em Ação
+Saiu o vídeo de apresentação técnica e conceitual do projeto no canal **Prof. Fabio Santos**!
+*   **Demo Completa:** Veja o sistema bloqueando o erro fatal da Adrenalina em tempo real.
+*   **Bastidores:** A arquitetura da API, a integração com Docker e como a lógica determinística funciona.
+*   **A Missão:** Entenda profundamente a motivação por trás do código.
+*   👉 **[Assista ao vídeo no YouTube](https://youtu.be/pov63geYlkk)**
+
+### [DEZ/2025] 📘 Nova Documentação de Arquitetura (Motor Lógico)
+Publicamos o guia técnico **[DOCS_IA_MOTOR.md](docs/DOCS_IA_MOTOR.md)**, essencial para novos voluntários (Devs e Profissionais de Saúde).
+*   **Abertura da "Caixa Preta":** Explicação detalhada de como o ValidRx implementa sua **Árvore de Decisão Determinística**, separando totalmente a Lógica (Python) do Conhecimento (Banco de Dados).
+*   **Trace de Execução:** Um passo a passo visual do que acontece no milissegundo em que uma prescrição chega à API (usando o caso real da Adrenalina).
+*   **Guia de Contribuição:** Entenda onde mexer no código para criar novos "Nós de Decisão" e como os dados persistem no PostgreSQL.
+
 ### [DEZ/2025] 🆕 Suporte Nativo ao Sistema MV (Soul)
 O ValidRx agora é oficialmente compatível com os padrões de dados do sistema **MV**, líder na rede pública.
 *   **Dicionário de Tradução Inteligente:** Implementamos uma camada de normalização na API (`ROUTE_MAPPING`) que atua como um tradutor em tempo real.
@@ -41,11 +54,6 @@ O ValidRx agora é oficialmente compatível com os padrões de dados do sistema 
     *   **Padrão MV:** Aceita siglas e mnemônicos (ex: `EV`, `VO`, `SC`, `IM`).
 Isso garante que o ValidRx funcione simultaneamente em ambientes híbridos sem necessidade de reconfiguração do código.
 
-### [DEZ/2025] 📘 Nova Documentação de Arquitetura (Motor Lógico)
-Publicamos o guia técnico **[DOCS_IA_MOTOR.md](docs/DOCS_IA_MOTOR.md)**, essencial para novos voluntários (Devs e Profissionais de Saúde).
-*   **Abertura da "Caixa Preta":** Explicação detalhada de como o ValidRx implementa sua **Árvore de Decisão Determinística**, separando totalmente a Lógica (Python) do Conhecimento (Banco de Dados).
-*   **Trace de Execução:** Um passo a passo visual do que acontece no milissegundo em que uma prescrição chega à API (usando o caso real da Adrenalina).
-*   **Guia de Contribuição:** Entenda onde mexer no código para criar novos "Nós de Decisão" e como os dados persistem no PostgreSQL.
 ---
 # 🏥 O Problema & A Missão
 
