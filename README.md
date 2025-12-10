@@ -132,6 +132,35 @@ O sistema valida cada item da prescrição passando por 7 níveis:
 
 ---
 
+## 🏆 Conformidade com Padrões Internacionais (ISMP)
+
+O **ValidRx** foi arquitetado seguindo rigorosamente as diretrizes do **[Institute for Safe Medication Practices (ISMP)](https://www.ismp.org/)**, a autoridade global independente em segurança medicamentosa.
+
+As "7 Camadas de Blindagem" do sistema cobrem os vetores de erro mais críticos identificados pela instituição. Abaixo, detalhamos o mapeamento entre a recomendação clínica e a implementação técnica:
+
+### 👶 A. Dose Pediátrica e Peso (Camadas 1 e 2)
+*   **Recomendação ISMP:** Uso obrigatório de checagem de dose baseada em peso (`mg/kg`) para pacientes pediátricos e estabelecimento de limites de dose máxima (*Max Dose Limits*).
+*   **Implementação ValidRx:** O sistema aplica lógica dupla de validação:
+    1.  **Dose Ponderal:** Valida o cálculo `mg/kg`.
+    2.  **Teto Absoluto (`teto_dose`):** Uma barreira final vital para evitar erros de cálculo em crianças obesas ou erros de casa decimal (ex: digitar 10.0mg em vez de 1.0mg).
+
+### 🛣️ B. Via de Administração (Camada 3)
+*   **Recomendação ISMP:** Prevenção de erros de "Via Trocada" (*Wrong Route*), frequentemente fatais (ex: Vincristina intratecal ou Adrenalina IV indevida).
+*   **Implementação ValidRx:** Utilizamos a abordagem de **Whitelist (Lista Branca)**, tecnicamente superior à *Blacklist*:
+    *   ❌ **Blacklist (Inseguro):** "Não permita Oral". (Se o médico digitar 'Nasal', o erro passa).
+    *   ✅ **Whitelist (ValidRx):** "Só aceite IV ou IM". (Qualquer outra entrada é bloqueada imediatamente).
+
+### 🚨 C. Medicamentos de Alta Vigilância (High-Alert Medications)
+*   **Recomendação ISMP:** Implementação de *"Hard Stops"* (Bloqueios Rígidos) quando limites de segurança de medicamentos perigosos são excedidos.
+*   **Implementação ValidRx:** O sistema diferencia avisos de bloqueios. Para erros críticos (como superdosagem de Adrenalina), o retorno é `status: "BLOCKED"`.
+    *   *Por que isso importa?* Alertas amarelos constantes causam "Fadiga de Alertas" e são ignorados. **Bloqueios salvam vidas.**
+
+### 🔄 D. Interoperabilidade e Contexto
+*   **Recomendação ISMP:** Padronização de terminologias para evitar ambiguidades.
+*   **Implementação ValidRx:** O sistema possui uma camada de tradução de "dialetos" hospitalares (ex: Tasy vs. MV). Isso mitiga erros de interpretação de siglas (ex: `EV` vs `IV`), garantindo que a validação ocorra sobre dados normalizados e seguros.
+
+---
+
 # ⚡ Como Rodar o Projeto
 
 ## Pré-requisitos
