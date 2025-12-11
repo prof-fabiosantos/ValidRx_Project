@@ -132,7 +132,7 @@ O sistema valida cada item da prescrição passando por 7 níveis:
 
 ---
 
-## 🏆 Conformidade com Padrões Internacionais (ISMP)
+## 🏆 Baseado em Recomendaçõom de Segurança do ISMP
 
 O **ValidRx** foi arquitetado seguindo rigorosamente as recomendações de segurança do **[Institute for Safe Medication Practices (ISMP)](https://www.ismp.org/)**, a autoridade global independente em segurança medicamentosa.
 
@@ -158,6 +158,12 @@ As "7 Camadas de Blindagem" do sistema cobrem os vetores de erro mais críticos 
 ### 🔄 D. Interoperabilidade e Contexto
 *   **Recomendação ISMP:** Padronização de terminologias para evitar ambiguidades.
 *   **Implementação ValidRx:** O sistema possui uma camada de tradução de "dialetos" hospitalares (ex: Tasy vs. MV). Isso mitiga erros de interpretação de siglas (ex: `EV` vs `IV`), garantindo que a validação ocorra sobre dados normalizados e seguros.
+
+### Referências:
+https://www.ismp.org/sites/default/files/newsletter-issues/20230323.pdf
+https://www.ismp.org/system/files/resources/2022-08/ISMP198-Periop-Guidelines-FINAL.pdf
+https://www.ismp.org/sites/default/files/attachments/2018-08/highAlert2018-Acute-Final.pdf
+https://ismp-brasil.org/wp-content/uploads/2024/06/BOLETIM-ISMP-BRASIL-PEDIATRIA.pdf
 
 ---
 
