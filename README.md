@@ -134,7 +134,7 @@ O sistema valida cada item da prescrição passando por 7 níveis:
 
 ## 🏆 Conformidade com Padrões Internacionais (ISMP)
 
-O **ValidRx** foi arquitetado seguindo rigorosamente as diretrizes do **[Institute for Safe Medication Practices (ISMP)](https://www.ismp.org/)**, a autoridade global independente em segurança medicamentosa.
+O **ValidRx** foi arquitetado seguindo rigorosamente as recomendações de segurança do **[Institute for Safe Medication Practices (ISMP)](https://www.ismp.org/)**, a autoridade global independente em segurança medicamentosa.
 
 As "7 Camadas de Blindagem" do sistema cobrem os vetores de erro mais críticos identificados pela instituição. Abaixo, detalhamos o mapeamento entre a recomendação clínica e a implementação técnica:
 
