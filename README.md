@@ -159,28 +159,28 @@ As "7 Camadas de Blindagem" do sistema cobrem os vetores de erro mais críticos 
 *   **Recomendação ISMP:** Padronização de terminologias para evitar ambiguidades.
 *   **Implementação ValidRx:** O sistema possui uma camada de tradução de "dialetos" hospitalares (ex: Tasy vs. MV). Isso mitiga erros de interpretação de siglas (ex: `EV` vs `IV`), garantindo que a validação ocorra sobre dados normalizados e seguros.
 
-### 📚 Fontes — ISMP e ISMP Brasil
+## 📚 Fontes — ISMP e ISMP Brasil
 
-## 1. ISMP Medication Safety Alert! – Newsletter (23 Mar 2023)
+### 1. ISMP Medication Safety Alert! – Newsletter (23 Mar 2023)
 - **Título:** *Implement strategies to prevent persistent medication errors and hazards*  
 - **Organização:** Institute for Safe Medication Practices – ISMP  
 - **Descrição:** Newsletter que aborda erros e riscos de medicação persistentes, destacando estratégias de prevenção de eventos adversos relacionados a medicamentos.  
 - **Link:** https://www.ismp.org/sites/default/files/newsletter-issues/20230323.pdf  
 - **Origem:** ECRI and ISMP
 
-## 2. Perioperative Guidelines – ISMP (2022)
+### 2. Perioperative Guidelines – ISMP (2022)
 - **Título:** *Guidelines for Perioperative Medication Safety*  
 - **Organização:** Institute for Safe Medication Practices – ISMP  
 - **Descrição:** Diretrizes focadas na segurança do uso de medicamentos em ambiente perioperatório (cirúrgico).  
 - **Link:** https://www.ismp.org/system/files/resources/2022-08/ISMP198-Periop-Guidelines-FINAL.pdf  
 
-## 3. High-Alert Medications – ISMP (2018)
+### 3. High-Alert Medications – ISMP (2018)
 - **Título:** *High-Alert Medications in Acute Care Settings*  
 - **Organização:** Institute for Safe Medication Practices – ISMP  
 - **Descrição:** Documento que discute práticas e recomendações para a gestão segura de medicamentos de alta vigilância em serviços de atenção aguda.  
 - **Link:** https://www.ismp.org/sites/default/files/attachments/2018-08/highAlert2018-Acute-Final.pdf  
 
-## 4. Boletim ISMP Brasil – Uso Seguro de Medicamentos em Pediatria (Jun 2024)
+### 4. Boletim ISMP Brasil – Uso Seguro de Medicamentos em Pediatria (Jun 2024)
 - **Título:** *Boletim ISMP Brasil – Uso Seguro de Medicamentos em Pacientes Pediátricos*  
 - **Organização:** ISMP Brasil  
 - **Descrição:** Boletim que aborda recomendações e práticas seguras no uso de medicamentos em pacientes pediátricos.  
