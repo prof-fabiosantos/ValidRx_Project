@@ -26,9 +26,7 @@ Para garantir qualidade **sem centralização excessiva**, definimos os seguinte
 - **Papel:**  
   - Define a visão de longo prazo  
   - Define a arquitetura macro  
-  - Tem o "Voto de Minerva" em impasses éticos ou técnicos  
-  - Não escreve todo o código; aprova a direção
-
+  - Tem o "Voto de Minerva" em impasses éticos ou técnicos   
 ---
 
 ### 🛡️ Core Maintainers (Os "Tenentes")
