@@ -16,7 +16,7 @@ Evitar o gargalo central, permitindo que a inovação aconteça nas pontas (hosp
 
 ---
 
-## 2. A Estrutura de Poder (Quem faz o quê?)
+## 2. Papeis (Quem faz o quê?)
 
 Para garantir qualidade **sem centralização excessiva**, definimos os seguintes papéis:
 
