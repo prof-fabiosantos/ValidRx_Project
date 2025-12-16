@@ -530,12 +530,6 @@ A colaboração médica garante que o ValidRx evolua de forma responsável, com 
 
 ------------------------------------------------------------------------
 
-# 💬  Discord
-
-https://discord.gg/HkFJFCt2
-
-------------------------------------------------------------------------
-
 ## 📄 Licença e Direitos Autorais
 
 Este projeto é distribuído sob a licença **Apache License 2.0**.
