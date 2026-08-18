@@ -132,7 +132,7 @@ O sistema valida cada item da prescrição passando por 7 níveis:
 
 ---
 
-## 🏆 Baseado em Recomendaçõom de Segurança do ISMP
+## 🏆 Baseado em Recomendação de Segurança do ISMP
 
 O **ValidRx** foi arquitetado seguindo rigorosamente as recomendações de segurança do **[Institute for Safe Medication Practices (ISMP)](https://www.ismp.org/)**, a autoridade global independente em segurança medicamentosa.
 
